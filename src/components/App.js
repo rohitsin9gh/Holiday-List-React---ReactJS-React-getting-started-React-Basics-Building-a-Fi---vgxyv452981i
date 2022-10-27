@@ -41,21 +41,23 @@ class App extends Component {
     return (
       <div id="main">
         {/* Do not remove the main div */}
-        <ol>
-          <li key="location1">{if(this.cityList.country=="India" && this.cityList.name=="Goa"){ return this.cityList.name;}}</li>
-          <li key="location2">{if(this.cityList.country=="Netherlands" && this.cityList.name=="Amsterdam"){ return this.cityList.name;}}</li>
-          <ol>
-           <li key="location1">{if(this.cityList.country=="USA" && this.cityList.name=="New York"){ return this.cityList.name;}}</li>
-          <li key="location2">{if(this.cityList.country=="India" && this.cityList.name=="Darjeeling"){ return this.cityList.name;}}</li>
-          </ol>
-          <ol>
-           <li key="location1">{if(this.cityList.country=="Japan" && this.cityList.name=="Tokyo"){ return this.cityList.name;}}</li>
-          <li key="location2">{if(this.cityList.country=="India" && this.cityList.name=="Lonavala"){ return this.cityList.name;}}</li>
-          </ol>
-        </ol>
+            {this.cityList.data.map((data, uniqueId) => <NewComponent key = {uniqueId} data = {data}/>)}
       </div>
     )
   }
+}
+
+class NewComponent extends Component {
+render() {
+return (
+<div>
+  <ol>
+    <li key="Location1">{if(this.props.data.name==="Goa" && this.props.data.country==="India"){return this.props.data.name;}}</li>
+    <li key="Location2">{if(this.props.data.name==="Amsterdam" && this.props.data.country==="Netherlands"){return this.props.data.name;}}</li>
+  </ol>
+</div>
+);
+}
 }
 
 
