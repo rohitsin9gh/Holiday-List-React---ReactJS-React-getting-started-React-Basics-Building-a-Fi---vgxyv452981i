@@ -42,15 +42,15 @@ class App extends Component {
       <div id="main">
         {/* Do not remove the main div */}
         <ol>
-          <li key="location1">if(cityList.country=="India" && cityList.name=="Goa"){ return cityList.name;}</li>
-          <li key="location2">if(cityList.country=="Netherlands" && cityList.name=="Amsterdam"){ return cityList.name;}</li>
+          <li key="location1">{if(this.cityList.country=="India" && this.cityList.name=="Goa"){ return this.cityList.name;}}</li>
+          <li key="location2">{if(this.cityList.country=="Netherlands" && this.cityList.name=="Amsterdam"){ return this.cityList.name;}}</li>
           <ol>
-           <li key="location1">if(cityList.country=="USA" && cityList.name=="New York"){ return cityList.name;}</li>
-          <li key="location2">if(cityList.country=="India" && cityList.name=="Darjeeling"){ return cityList.name;}</li>
+           <li key="location1">{if(this.cityList.country=="USA" && this.cityList.name=="New York"){ return this.cityList.name;}}</li>
+          <li key="location2">{if(this.cityList.country=="India" && this.cityList.name=="Darjeeling"){ return this.cityList.name;}}</li>
           </ol>
           <ol>
-           <li key="location1">if(cityList.country=="Japan" && cityList.name=="Tokyo"){ return cityList.name;}</li>
-          <li key="location2">if(cityList.country=="India" && cityList.name=="Lonavala"){ return cityList.name;}</li>
+           <li key="location1">{if(this.cityList.country=="Japan" && this.cityList.name=="Tokyo"){ return this.cityList.name;}}</li>
+          <li key="location2">{if(this.cityList.country=="India" && this.cityList.name=="Lonavala"){ return this.cityList.name;}}</li>
           </ol>
         </ol>
       </div>
